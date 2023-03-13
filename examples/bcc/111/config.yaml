@@ -1,0 +1,27 @@
+data:
+  data_file: D:\DislocationProject\MagicDislocation\examples\bcc\111\perfect.dat
+  lattice: 3.115
+  dxdydz:
+    - 0.40824
+    - 0.707
+    - 0.2887
+layerization:
+  direction: 2
+s_plane:
+  center_pos:
+    - 18.5854
+    - 115.50975
+    - 55.1425
+  type: rect
+  edge_range:
+    - 0
+    - 38
+    - 650
+move:
+  step: 1
+  direction:
+    - 0
+    - 0
+    - 1
+  move_layer_range: 30
+
