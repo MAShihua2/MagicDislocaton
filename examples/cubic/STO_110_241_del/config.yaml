@@ -1,0 +1,32 @@
+data:
+  input_file: D:\DislocationProject\MagicDislocation\examples\cubic\STO_110_241_del\STO_110_241_del.dat
+  lattice: 3.9127031
+  data_line_item_num: 6
+  pos_index:
+    - 3
+    - 6
+  dxdydz:
+    - 1.414
+    - 0.707
+    - 0.707
+  type: data
+layerization:
+  direction: 2
+s_plane:
+  center_pos:
+    - 10.759
+    - 240.011
+    - 110.285
+  type: rect
+  edge_range:
+    - 650
+    - 92
+    - 0
+move:
+  step: 1.6
+  direction:
+    - 0
+    - 0
+    - -1
+  move_layer_range: 40
+
