@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 data:
   input_file: F:\Projects\MagicDislocation\examples\fcc\rotate_loop_new\model.data
   type: data
@@ -39,3 +40,46 @@ move:
     - 0
   move_layer_range: 40
 
+=======
+data:
+  input_file: F:\Projects\MagicDislocation\examples\fcc\rotate_loop_new\model.data
+  type: data
+  pos_index:
+    - 2
+    - 5
+  lattice: 3.556
+  dxdydz:
+    - 0.3535533905932738
+    - 0
+    - 0.204124
+  data_line_item_num: 8
+layerization:
+  direction: 2
+s_plane:
+  center_pos:
+    - 0.62809
+    - 1.025665
+    - 0.3626265
+  type: loop
+  num_points: 48
+  fix_coord: 2
+  scale: 7
+  base: 2
+  rotate_para:
+    target_plane: 
+      - 0
+      - 1
+      - 2.82862
+    insert_plane:
+      - 0
+      - 0
+      - -1
+move:
+  step: 0.408248290463863
+  direction:
+    - 0
+    - 1
+    - 0
+  move_layer_range: 40
+
+>>>>>>> de2d02f6b59fc072d8386febfd84b80e1f0d12aa

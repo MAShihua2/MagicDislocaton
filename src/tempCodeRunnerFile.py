@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     # sub_action3 = subs_list.add_parser("S面-线/矩形")
     # sub_action3.add_argument("usage", help="使用该形状", widget="Dropdown", choices=["True", "False"])
     # sub_action3.add_argument("center_pos", help="中心坐标", default="-1")
@@ -20,4 +21,28 @@
     # sub_action5 = subs_list.add_parser("移动")
     # sub_action5.add_argument("displace", help="移动幅度（a）", widget="TextField")
     # sub_action5.add_argument("direction", help="移动方向", widget="Dropdown", choices=["矩形", "圆形", "线"])
+=======
+    # sub_action3 = subs_list.add_parser("S面-线/矩形")
+    # sub_action3.add_argument("usage", help="使用该形状", widget="Dropdown", choices=["True", "False"])
+    # sub_action3.add_argument("center_pos", help="中心坐标", default="-1")
+    # sub_action3.add_argument("edge_range", help="矩形范围【中心到各个边的距离】", widget="TextField")
+
+    # sub_action4 = subs_list.add_parser("S面-圆形")
+    # sub_action4.add_argument("usage", help="使用该形状", widget="Dropdown", choices=["True", "False"])
+    # sub_action4.add_argument("center_pos", help="中心坐标", widget="TextField")
+    # sub_action4.add_argument("type", help="位错形状", widget="Dropdown", choices=["矩形", "圆形", "线"])
+    # sub_action4.add_argument("num_points", help="S面点数", widget="TextField")
+    # sub_action4.add_argument("scale", help="长度参数（根号外）", widget="TextField")
+    # sub_action4.add_argument("base", help="长度参数（根号内）", widget="TextField")
+    # sub_action4.add_argument("rotate_cos_theta", help="旋转角度 (cos)", widget="TextField")
+    # sub_action4.add_argument("margin_flag", help="S面旋转后微调", widget="Dropdown", choices=[1, 0])
+    # sub_action4.add_argument("margin_scale", help="S面旋转后微调距离（根号外，分数）", widget="TextField")
+    # sub_action4.add_argument("margin_base", help="S面旋转后微调距离（根号内）", widget="TextField")
+    # sub_action4.add_argument("target_plane", help="目标面方向", widget="TextField")
+    # sub_action4.add_argument("insert_plane", help="插入面方向", widget="TextField")
+
+    # sub_action5 = subs_list.add_parser("移动")
+    # sub_action5.add_argument("displace", help="移动幅度（a）", widget="TextField")
+    # sub_action5.add_argument("direction", help="移动方向", widget="Dropdown", choices=["矩形", "圆形", "线"])
+>>>>>>> de2d02f6b59fc072d8386febfd84b80e1f0d12aa
     # sub_action5.add_argument("layer_range", help="移动范围【S面上下层数】")

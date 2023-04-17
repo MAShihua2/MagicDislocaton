@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 data:
   input_file: D:\DislocationProject\MagicDislocation\examples\cubic\STO_100_2_del\STO_100_del2.dat
   lattice: 3.9127031
@@ -30,3 +31,37 @@ move:
     - 0
   move_layer_range: 30
 
+=======
+data:
+  input_file: D:\DislocationProject\MagicDislocation\examples\cubic\STO_100_2_del\STO_100_del2.dat
+  lattice: 3.9127031
+  data_line_item_num: 6
+  pos_index:
+    - 3
+    - 6
+  dxdydz:
+    - 1.414
+    - 0.707
+    - 0.707
+  type: data
+layerization:
+  direction: 2
+s_plane:
+  center_pos:
+    - 18.5854
+    - 115.50975
+    - 55.1425
+  type: rect
+  edge_range:
+    - 0
+    - 38
+    - 650
+move:
+  step: 1
+  direction:
+    - -1
+    - 0
+    - 0
+  move_layer_range: 30
+
+>>>>>>> de2d02f6b59fc072d8386febfd84b80e1f0d12aa
