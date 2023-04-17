@@ -1,5 +1,6 @@
 
 #If you use this program to construct dislocation, please cite:
+
 Shihua MA, Wei SHAO, Shijun ZHAO. MagicDislocation: A Flexible Dislocations Construction Toolkit Based on Continuum Dislocation Theory. COMPUTER PHYSICS COMMUNICATIONS. Submitted
  
 
