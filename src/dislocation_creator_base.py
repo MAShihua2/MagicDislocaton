@@ -23,7 +23,9 @@ class DislocationCreatorBase(object):
         self.output_file = data_config['input_file'].replace("dat", "moved.dat")
         # layerzie
         layerize_direction = layerization_config['direction']
+        self.layerize_direction = layerize_direction
         pos_index = data_config['pos_index']
+        self.pos_inex = pos_index
         dxdydz = [0, 0, 0]
         dxdydz[layerize_direction] = self.dxdydz[layerize_direction]
         self.layer_info = self.layerize(self.data[:, pos_index[0]:pos_index[1]], self.lattice, dx=dxdydz[0], dy=dxdydz[1], dz=dxdydz[2])
@@ -63,11 +65,11 @@ class DislocationCreatorBase(object):
         
     
     def get_data_info(self):
-        data = self.data
+        data = self.data[:, self.pos_inex[0]:self.pos_inex[1]]
         self.num = len(data)
-        self.x_range = (min(data[:, 3]), max(data[:, 3]))
-        self.y_range = (min(data[:, 4]), max(data[:, 4]))
-        self.z_range = (min(data[:, 5]), max(data[:, 5]))
+        self.x_range = (min(data[:, 0]), max(data[:, 0]))
+        self.y_range = (min(data[:, 1]), max(data[:, 1]))
+        self.z_range = (min(data[:, 2]), max(data[:, 2]))
         self.x_len = self.x_range[1] - self.x_range[0]
         self.y_len = self.y_range[1] - self.y_range[0]
         self.z_len = self.z_range[1] - self.z_range[0]
@@ -98,7 +100,7 @@ class DislocationCreatorBase(object):
             layer_ranges.append(new_range) #产生一个y_range的列表
             if last_range[1] + d >= max_pos:
                 break
-
+        self.layer_ranges = layer_ranges
         num_plane = len(layer_ranges)
         print(f"{datetime.now()} =====> Number of Layers", num_plane)
         print(f"{datetime.now()} =====> First layer: ", layer_ranges[0])
@@ -112,6 +114,12 @@ class DislocationCreatorBase(object):
                     layer_info += [i]
                     break
         return layer_info
+    
+    def get_layer(self, atom, fix_coord):
+        for i, layer_range in enumerate(self.layer_ranges):
+            if layer_range[0] < atom[fix_coord] < layer_range[1]:
+                return i
+        return -1
 
 
     def write(self, data):
@@ -158,7 +166,7 @@ class DislocationCreatorBase(object):
         new_atom = []
         for i, item in enumerate(self.data):
             layer = self.layer_info[i]
-            if self.layer_num / 2 - move_layer_range < layer < self.layer_num / 2 + move_layer_range :
+            if self.get_layer(s_center_pos, self.layerize_direction) - move_layer_range < layer < self.get_layer(s_center_pos, self.layerize_direction) + move_layer_range:
                 # n * 3 * 3
                 di_vectors = s_tri_points[:, :, :] - item[3:6]
                 di_vectors = di_vectors / np.sqrt((di_vectors * di_vectors).sum(2)).reshape(s_shape[0], 3, 1)

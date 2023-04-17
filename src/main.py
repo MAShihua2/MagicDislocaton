@@ -27,16 +27,15 @@ s_type = configs['s_plane']['type']
 
 # move
 move_direction = configs['move']['direction']
-print(move_direction)
 move_step = configs['move']['step']
 move_layer_range = configs['move']['move_layer_range']
 
 
-if s_type == "rect":
-    dislocation_creator = DislocationCreatorBase(data_config, layerization_config)
-elif s_type == "loop":
-    dislocation_creator = DislocationCreatorWithSplaneOperator(data_config, layerization_config)
+# if s_type == "rect":
+#     dislocation_creator = DislocationCreatorBase(data_config, layerization_config)
+# elif s_type == "loop":
+#     dislocation_creator = DislocationCreatorWithSplaneOperator(data_config, layerization_config)
 
-
+dislocation_creator = DislocationCreatorWithSplaneOperator(data_config, layerization_config) # gb
 dislocation_creator.create_dislocation(move_step=move_step, move_direction=move_direction, move_layer_range=move_layer_range, s_para=configs['s_plane'])
             

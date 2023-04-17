@@ -1,0 +1,40 @@
+
+data:
+  input_file: D:\DislocationProject\MagicDislocation\examples\fcc\s350_sin\S350.data
+  type: data
+  pos_index:
+    - 2
+    - 5
+  lattice: 3.556
+  dxdydz:
+    - 0.0
+    - 0.357
+    - 0.0
+  data_line_item_num: 8
+layerization:
+  direction: 1
+s_plane:
+  center_pos:
+    - -71.2
+    - 65.7
+    - 0
+  type: sin
+  edge_range:
+    - 70.27
+    - 0
+    - 100
+  sin:
+    num_points: 50
+    fix_coord: 1
+    A: 10
+    omega: 8
+    start: 1
+    end: 2
+move:
+  step: 0.707
+  direction:
+    - 0
+    - 0
+    - 1
+  move_layer_range: 20
+
