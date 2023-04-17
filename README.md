@@ -18,7 +18,7 @@ For the system, users should give the lattice constant, data file type, data fil
 
 S plane is related to the shape and range of dislocation. If the S plane is a circle, the dislocation would be a loop. If the S plane is a rectangle, the dislocation would also be a rectangle loop. When trying to create a dislocation, the user should pass the $\bf{center}$  $\bf{position}$ of the S plane to the interface. Also, if the S plane is a rectangle, the user should tell the distances from center position to edges in the direction of X, Y, Z. If the S plane is a loop, the user should tell the radius of this loop. Besides, We default to the S-plane being perpendicular to some coordinate axis. If the S-plane is not perpendicular to the coordinate axis, the user can first construct an S plane perpendicular to the axes and then produce the desired S-plane by means of a rotation. This, of course, requires the user to provide the $\bf{orientation}$ of the initial S plane and the final S plane.
 
-The Burgers vector $<h, k, l>$ represents the moving direction and displace of atoms. Considering there are several different moving directions for a Burgers vector, users are required to give a detailed direction such as $[h, k, l]$ or $[-h, -k, l]$. The detailed direction should be determined according to the S plane and axis's modeling direction.
+The Burgers vector <h, k, l> represents the moving direction and displace of atoms. Considering there are several different moving directions for a Burgers vector, users are required to give a detailed direction such as [h, k, l] or [-h, -k, l]. The detailed direction should be determined according to the S plane and axis's modeling direction.
 
 
 # How to Run
