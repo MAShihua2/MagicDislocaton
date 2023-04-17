@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+###cite
+If you use this program to generate dislocation, please cite following ref:
+Shihua MA, Wei shao, shijun ZHAO, MagicDislocation: A Flexible Dislocations Construction
+Toolkit Based on Continuum Dislocation Theory. 
+
 # MagicDislocation
 This is a flexible dislocation creation tool based on Python3
 
